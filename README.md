@@ -32,4 +32,4 @@ Welcome to the **Hotel Management System**, a comprehensive application develope
 INSERT INTO login (username, password)
 VALUES ('admin', 'root');
 ```
-**in *HMS.sql* file located in project root directory.***
+**in *HMS.sql* file located in project root directory.**
