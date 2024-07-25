@@ -13,7 +13,7 @@ import javax.swing.SwingUtilities;
 
 public class Reception extends JFrame implements ActionListener {
 
-	JButton b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12;
+	JButton b1, b2, b4, b5, b6, b7, b8, b9, b10, b11, b12;
 
 	Reception() {
 		setBounds(340, 120, 800, 675);
@@ -32,17 +32,10 @@ public class Reception extends JFrame implements ActionListener {
 		b2.setBounds(10, 80, 200, 30);
 		add(b2);
 
-		b3 = new JButton("Department");
-		b3.setBackground(Color.black);
-		b3.setForeground(Color.white);
-		b3.addActionListener(this);
-		b3.setBounds(10, 130, 200, 30);
-		add(b3);
-
 		b4 = new JButton("All Employees Info");
 		b4.setBackground(Color.black);
 		b4.setForeground(Color.white);
-		b4.setBounds(10, 180, 200, 30);
+		b4.setBounds(10, 130, 200, 30);
 		b4.addActionListener(this);
 		add(b4);
 
@@ -50,56 +43,56 @@ public class Reception extends JFrame implements ActionListener {
 		b5.setBackground(Color.black);
 		b5.setForeground(Color.white);
 		b5.addActionListener(this);
-		b5.setBounds(10, 230, 200, 30);
+		b5.setBounds(10, 180, 200, 30);
 		add(b5);
 
 		b6 = new JButton("Manager Info");
 		b6.setBackground(Color.black);
 		b6.setForeground(Color.white);
 		b6.addActionListener(this);
-		b6.setBounds(10, 280, 200, 30);
+		b6.setBounds(10, 230, 200, 30);
 		add(b6);
 
 		b7 = new JButton("Check Out");
 		b7.setBackground(Color.black);
 		b7.setForeground(Color.white);
 		b7.addActionListener(this);
-		b7.setBounds(10, 330, 200, 30);
+		b7.setBounds(10, 280, 200, 30);
 		add(b7);
 
 		b8 = new JButton("Update Check Status");
 		b8.setBackground(Color.black);
 		b8.setForeground(Color.white);
 		b8.addActionListener(this);
-		b8.setBounds(10, 380, 200, 30);
+		b8.setBounds(10, 330, 200, 30);
 		add(b8);
 
 		b9 = new JButton("Update Room Status");
 		b9.setBackground(Color.black);
 		b9.setForeground(Color.white);
 		b9.addActionListener(this);
-		b9.setBounds(10, 430, 200, 30);
+		b9.setBounds(10, 380, 200, 30);
 		add(b9);
 
 		b10 = new JButton("Pick up Service");
 		b10.setBackground(Color.black);
 		b10.setForeground(Color.white);
 		b10.addActionListener(this);
-		b10.setBounds(10, 480, 200, 30);
+		b10.setBounds(10, 430, 200, 30);
 		add(b10);
 
 		b11 = new JButton("Search Room");
 		b11.setBackground(Color.black);
 		b11.addActionListener(this);
 		b11.setForeground(Color.white);
-		b11.setBounds(10, 530, 200, 30);
+		b11.setBounds(10, 480, 200, 30);
 		add(b11);
 
 		b12 = new JButton("Logout");
 		b12.setBackground(Color.black);
 		b12.setForeground(Color.white);
 		b12.addActionListener(this);
-		b12.setBounds(10, 580, 200, 30);
+		b12.setBounds(10, 530, 200, 30);
 		add(b12);
 
 		ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("HotelManagementSystem/icons/reception1.jpg"));
@@ -120,8 +113,6 @@ public class Reception extends JFrame implements ActionListener {
 			SwingUtilities.invokeLater(() -> new AddCustomer().setVisible(true));
 		} else if (ae.getSource() == b2) {
 			SwingUtilities.invokeLater(() -> new Room().setVisible(true));
-		} else if (ae.getSource() == b3) {
-			SwingUtilities.invokeLater(() -> new Department().setVisible(true));
 		} else if (ae.getSource() == b4) {
 			SwingUtilities.invokeLater(() -> new EmployeeInfo().setVisible(true));
 		} else if (ae.getSource() == b5) {

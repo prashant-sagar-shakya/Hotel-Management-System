@@ -31,24 +31,20 @@ public class ManagerInfo extends JFrame implements ActionListener {
 		l3.setBounds(290, 10, 70, 30);
 		add(l3);
 
-		JLabel l4 = new JLabel("Department");
-		l4.setBounds(410, 10, 70, 30);
-		add(l4);
-
 		JLabel l5 = new JLabel("Salary");
-		l5.setBounds(530, 10, 70, 30);
+		l5.setBounds(410, 10, 70, 30);
 		add(l5);
 
 		JLabel l6 = new JLabel("Mobile");
-		l6.setBounds(650, 10, 70, 30);
+		l6.setBounds(530, 10, 70, 30);
 		add(l6);
 
 		JLabel l7 = new JLabel("Aadhar");
-		l7.setBounds(770, 10, 70, 30);
+		l7.setBounds(650, 10, 70, 30);
 		add(l7);
 
 		JLabel l8 = new JLabel("Email");
-		l8.setBounds(890, 10, 70, 30);
+		l8.setBounds(770, 10, 70, 30);
 		add(l8);
 
 		t1 = new JTable();
@@ -78,7 +74,7 @@ public class ManagerInfo extends JFrame implements ActionListener {
 
 		if (ae.getSource() == b1) {
 			try (conn c = new conn()) {
-				String str = "select * from employee where job='Manager'";
+				String str = "select name, age, gender, department, salary, phone, aadhar, email from employee where department='Manager'";
 				ResultSet rs = c.s.executeQuery(str);
 
 				t1.setModel(DbUtils.resultSetToTableModel(rs));
@@ -87,9 +83,9 @@ public class ManagerInfo extends JFrame implements ActionListener {
 				System.out.println("Error loading manager data: " + e.getMessage());
 				JOptionPane.showMessageDialog(null, "Error loading manager data. Please try again.");
 			} catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-        } else if (ae.getSource() == b2) {
+				throw new RuntimeException(e);
+			}
+		} else if (ae.getSource() == b2) {
 			SwingUtilities.invokeLater(() -> new Reception().setVisible(true));
 			this.setVisible(false);
 		}

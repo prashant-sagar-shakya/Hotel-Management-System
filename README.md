@@ -17,4 +17,19 @@ Welcome to the **Hotel Management System**, a comprehensive application develope
 - **SQL:** Database management for storing and retrieving data efficiently.
 - **JDBC:** Java Database Connectivity for seamless interaction with the database.
 - **Swing:** User interface for desktop applications.
-- **Maven/Gradle:** Build automation and dependency management.
+
+## Packages and Tools Required
+
+- **IntelliJ-IDEA:** The IDE used for make develop this project.
+- **WAMP Server:** Wampp server needs to be installed in your system.
+- **mysql-connector-j-9.0.0.jar:** This file is located in project root directory, import it as reference jar file to connect mySQL.
+- **rs2xml.jar:** This file is also located in project root directory, import it as reference jar file to resolve the package ***import net.proteanit.sql.DbUtils;***
+- **mySQL workbench:** It is needed to view or modify the databse running over the ***port:3306***
+
+### Note:
+**By default username is admin and password is root, you can further change the username and password by updating the entry:**
+```shell
+INSERT INTO login (username, password)
+VALUES ('admin', 'root');
+```
+**in *HMS.sql* file located in project root directory.***

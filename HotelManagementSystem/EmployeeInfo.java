@@ -77,7 +77,7 @@ public class EmployeeInfo extends JFrame implements ActionListener {
 
 		if (ae.getSource() == b1) {
 			try (conn c = new conn()) {
-				String str = "select * from employee";
+				String str = "select name, age, gender, department, salary, phone, aadhar, email from employee"; // Adjusted query
 				ResultSet rs = c.s.executeQuery(str);
 
 				t1.setModel(DbUtils.resultSetToTableModel(rs));
