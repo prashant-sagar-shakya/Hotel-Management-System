@@ -2,7 +2,6 @@ package HotelManagementSystem;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.PreparedStatement;
@@ -20,9 +19,11 @@ import javax.swing.SwingUtilities;
 public class AddRooms extends JFrame implements ActionListener {
 
 	JTextField t1, t2;
+	@SuppressWarnings("rawtypes")
 	JComboBox c1, c2, c3;
 	JButton b1, b2;
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	AddRooms() {
 		setBounds(400, 200, 750, 500);
 
@@ -106,6 +107,7 @@ public class AddRooms extends JFrame implements ActionListener {
 		setVisible(true);
 	}
 
+	@SuppressWarnings("resource")
 	public void actionPerformed(ActionEvent ae) {
 
 		if (ae.getSource() == b1) {

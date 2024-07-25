@@ -22,9 +22,11 @@ public class AddDrivers extends JFrame implements ActionListener {
 
 	JTextField t1, t2, t3, t4, t5;
 	JRadioButton r1, r2;
+	@SuppressWarnings("rawtypes")
 	JComboBox c1;
 	JButton b1, b2;
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	AddDrivers() {
 		setBounds(400, 200, 750, 500);
 
@@ -131,6 +133,7 @@ public class AddDrivers extends JFrame implements ActionListener {
 		setVisible(true);
 	}
 
+	@SuppressWarnings("resource")
 	public void actionPerformed(ActionEvent ae) {
 
 		if (ae.getSource() == b1) {

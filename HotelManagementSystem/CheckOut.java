@@ -21,6 +21,7 @@ public class CheckOut extends JFrame implements ActionListener {
 	JTextField t1;
 	JButton b1, b2, b3;
 
+	@SuppressWarnings("resource")
 	CheckOut() {
 
 		JLabel l1 = new JLabel("Check Out");

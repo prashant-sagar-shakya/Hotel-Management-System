@@ -1,12 +1,10 @@
 package HotelManagementSystem;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import javax.swing.*;
 

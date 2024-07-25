@@ -20,10 +20,12 @@ public class AddCustomer extends JFrame implements ActionListener {
 
 	JTextField t1, t2, t3, t4, t5;
 	JButton b1, b2;
+	@SuppressWarnings("rawtypes")
 	JComboBox c1;
 	Choice c2;
 	JRadioButton r1, r2;
 
+	@SuppressWarnings({ "rawtypes", "unchecked", "resource" })
 	AddCustomer() {
 		setBounds(400, 200, 700, 500);
 
@@ -144,6 +146,7 @@ public class AddCustomer extends JFrame implements ActionListener {
 	}
 
 
+	@SuppressWarnings("resource")
 	public void actionPerformed(ActionEvent ae) {
 
 		if (ae.getSource() == b1) {

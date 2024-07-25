@@ -9,10 +9,13 @@ public class AddEmployee extends JFrame implements ActionListener {
 
 	JTextField t1, t2, t3, t4, t5, t6;
 	JRadioButton r1, r2;
+	@SuppressWarnings("rawtypes")
 	JComboBox c1;
 	JButton b1;
+	@SuppressWarnings("rawtypes")
 	JComboBox departmentComboBox; // Add a combo box for department selection
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	AddEmployee() {
 		setBounds(380, 200, 790, 500);
 
@@ -135,6 +138,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 		setVisible(true);
 	}
 
+	@SuppressWarnings("unused")
 	public void actionPerformed(ActionEvent ae) {
 
 		if (ae.getSource() == b1) {
@@ -186,6 +190,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 		}
 	}
 
+	@SuppressWarnings("resource")
 	private String[] getDepartments() {
 		try {
 			conn c = new conn();

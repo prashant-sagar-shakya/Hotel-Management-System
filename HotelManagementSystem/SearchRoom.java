@@ -14,11 +14,13 @@ import net.proteanit.sql.DbUtils;
 
 public class SearchRoom extends JFrame implements ActionListener {
 
+	@SuppressWarnings("rawtypes")
 	JComboBox c1;
 	JCheckBox c2;
 	JButton b1, b2;
 	JTable t1;
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	SearchRoom() {
 
 		JLabel l1 = new JLabel("Search Rooms");
